@@ -1,0 +1,36 @@
+.benefits {
+	padding-bottom: 47px;
+	&__list {
+		display: flex;
+		column-gap: 30px;
+	}
+
+	&__item {
+		@include grid(4, 30px);
+	}
+
+	&__box {
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		background-color: var(--light-bg-color);
+		border-radius: 4px;
+	}
+
+	&__icon {
+		display: block;
+	}
+
+	&__title {
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		line-height: 1.7;
+		color: var(--light-color);
+	}
+}
