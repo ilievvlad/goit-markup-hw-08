@@ -24,10 +24,11 @@
 	&__inner {
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 	}
 
 	&__list {
-		margin-bottom: 300px;
+		margin-bottom: auto;
 	}
 
 	&__item {

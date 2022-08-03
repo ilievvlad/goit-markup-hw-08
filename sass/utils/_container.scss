@@ -1,5 +1,17 @@
 .container {
-	max-width: 1200px;
+	max-width: 320px;
 	margin: 0 auto;
 	padding: 0 15px;
+
+	@include mq(mob) {
+		max-width: 480px;
+	}
+
+	@include mq(tab) {
+		max-width: 768px;
+	}
+
+	@include mq(desk) {
+		max-width: 1200px;
+	}
 }
