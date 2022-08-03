@@ -1,6 +1,10 @@
 .title {
 	text-align: center;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 28px;
 	line-height: 1.2;
+
+	@include mq(desk) {
+		font-size: 36px;
+	}
 }

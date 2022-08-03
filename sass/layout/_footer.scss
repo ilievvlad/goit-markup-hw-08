@@ -3,8 +3,39 @@
 	padding: 60px 0;
 	&__inner {
 		display: flex;
-		align-items: baseline;
-		column-gap: 70px;
+		flex-direction: column;
+		gap: 60px;
+
+		@include mq(desk) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+	}
+
+	&__body {
+		@include mq(tab) {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+
+		@include mq(desk) {
+			gap: 70px;
+		}
+	}
+
+	&__contacts {
+		text-align: center;
+		margin-bottom: 60px;
+
+		@include mq(tab) {
+			margin-bottom: 0;
+		}
+
+		@include mq(desk) {
+			text-align: left;
+		}
 	}
 
 	&__logo {
@@ -30,5 +61,35 @@
 		text-transform: uppercase;
 		color: var(--white-color);
 		margin-bottom: 20px;
+		text-align: center;
+
+		@include mq(desk) {
+			text-align: left;
+		}
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include mq(desk) {
+			display: block;
+		}
+	}
+
+	&__subscribe-form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+
+		@include mq(desk) {
+			flex-direction: row;
+			justify-content: left;
+			gap: 12px;
+		}
 	}
 }

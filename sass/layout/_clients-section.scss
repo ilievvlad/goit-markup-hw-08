@@ -1,15 +1,28 @@
 .clients {
 	&__title {
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+
+		@include mq(desk) {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__list {
 		display: flex;
-		column-gap: 30px;
+		flex-wrap: wrap;
+		gap: 30px;
 	}
 
 	&__item {
-		@include grid(6, 30px);
+		@include grid(2, 30px);
+
+		@include mq(tab) {
+			@include grid(3, 30px);
+		}
+
+		@include mq(desk) {
+			@include grid(6, 30px);
+		}
 	}
 
 	&__link {

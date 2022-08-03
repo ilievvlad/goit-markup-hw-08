@@ -3,11 +3,22 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
-	width: 528px;
-	height: 581px;
+	width: 320px;
+	height: 609px;
 	border-radius: 4px;
 	background-color: var(--white-bg-color);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	@include mq(mob) {
+		width: 450px;
+		height: 609px;
+	}
+
+	@include mq(desk) {
+		width: 528px;
+		height: 581px;
+	}
+
 	&__close {
 		position: absolute;
 		top: 8px;
@@ -37,10 +48,14 @@
 
 	&__title {
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 1.2;
 		text-align: center;
 		margin-bottom: 12px;
+
+		@include mq(mob) {
+			font-size: 20px;
+		}
 	}
 }
 .backdrop.is-hidden .modal {
